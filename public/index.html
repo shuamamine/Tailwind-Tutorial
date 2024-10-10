@@ -5,30 +5,37 @@
   <title>Document</title>
   <link rel="stylesheet" href="styles.css">
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body class="text-gray-600 font-custom">
   <div class="grid md:grid-cols-3">
-    <div class="md:col-span-1">
-      <nav>
-        <div>
+    <div class="md:col-span-1 md:flex md:justify-end">
+      <nav class="text-right">
+        <div class="flex justify-between items-center">
           <h1 class="font-bold uppercase p-4 border-b border-gray-100">
-            <a href="/">Foodie</a>
+            <a href="/" class="hover:text-red-600">Foodie</a>
           </h1>
+          <div class="px-4 cursor-pointer md:hidden" id="burger">
+            <svg class="w-6 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
+          </div>
         </div>
-        <ul>
-          <li class="text-gray-700 font-bold">
-            <a href="#">
+        <ul class="text-sm mt-6 hidden md:block" id="menu">
+          <li class="text-gray-700 font-bold py-1">
+            <a href="#" class="px-4 flex justify-end border-r-4 border-primary">
               <span>Home</span>
+              <svg class="w-5 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M575.8 255.5c0 18-15 32.1-32 32.1l-32 0 .7 160.2c0 2.7-.2 5.4-.5 8.1l0 16.2c0 22.1-17.9 40-40 40l-16 0c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1L416 512l-24 0c-22.1 0-40-17.9-40-40l0-24 0-64c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32 14.3-32 32l0 64 0 24c0 22.1-17.9 40-40 40l-24 0-31.9 0c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2l-16 0c-22.1 0-40-17.9-40-40l0-112c0-.9 0-1.9 .1-2.8l0-69.7-32 0c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"/></svg>
             </a>
           </li>
-          <li>
-            <a href="#">
+          <li class="py-1">
+            <a href="#" class="px-4 flex justify-end border-r-4 border-white">
               <span>About</span>
+              <svg class="w-5 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M80 160c0-35.3 28.7-64 64-64l32 0c35.3 0 64 28.7 64 64l0 3.6c0 21.8-11.1 42.1-29.4 53.8l-42.2 27.1c-25.2 16.2-40.4 44.1-40.4 74l0 1.4c0 17.7 14.3 32 32 32s32-14.3 32-32l0-1.4c0-8.2 4.2-15.8 11-20.2l42.2-27.1c36.6-23.6 58.8-64.1 58.8-107.7l0-3.6c0-70.7-57.3-128-128-128l-32 0C73.3 32 16 89.3 16 160c0 17.7 14.3 32 32 32s32-14.3 32-32zm80 320a40 40 0 1 0 0-80 40 40 0 1 0 0 80z"/></svg>
             </a>
           </li>
-          <li>
-            <a href="#">
+          <li class="py-1">
+            <a href="#"class="px-4 flex justify-end border-r-4 border-white">
               <span>Contact</span>
+              <svg class="w-5 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg>
             </a>
           </li>
         </ul>
@@ -37,8 +44,8 @@
   
     <main class="px-16 py-6 bg-gray-300 md:col-span-2">
       <div class="flex justify-center md:justify-end">
-        <a href="#" class="text-primary">Log in</a>
-        <a href="#" class="text-primary ml-2">Sign up</a>
+        <a href="#" class="btn text-primary border-primary md:border-2 transition ease-out duration-500">Log in</a>
+        <a href="#" class="btn text-primary ml-2 border-primary md:border-2 transition ease-out duration-500">Sign up</a>
       </div>
       <header>
         <h2 class="text-gray-700 text-6xl font-semibold">Recipes</h2>
@@ -49,33 +56,36 @@
   
         <div class="mt-8 grid lg:grid-cols-3 gap-10">
           <!-- cards go here -->
-          <div class="card"> 
+          <div class="card hover:shadow-lg"> 
             <img src="img/stew.jpg" alt="stew" class="w-full h-32 sm:h-48 object-cover">
             <div class="m-4">
               <span class="font-bold">5 Bean Chili Stew</span>
               <span class="block text-gray-500 text-sm">Recipe by Mario</span>
             </div>
             <div class="badge">
+                <svg class="w-5 inline-block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M464 256A208 208 0 1 1 48 256a208 208 0 1 1 416 0zM0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM232 120l0 136c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2 280 120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"/></svg>
                 <span>25 mins</span>
             </div>
           </div>
-          <div class="card"> 
+          <div class="card hover:shadow-lg"> 
             <img src="img/noodles.jpg" alt="stew" class="w-full h-32 sm:h-48 object-cover">
             <div class="m-4">
               <span class="font-bold">Veg Noodles</span>
               <span class="block text-gray-500 text-sm">Recipe by Mario</span>
             </div>
             <div class="badge">
+                <svg class="w-5 inline-block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M464 256A208 208 0 1 1 48 256a208 208 0 1 1 416 0zM0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM232 120l0 136c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2 280 120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"/></svg>
                 <span>25 mins</span>
             </div>
           </div>
-          <div class="card"> 
+          <div class="card hover:shadow-lg"> 
             <img src="img/curry.jpg" alt="stew" class="w-full h-32 sm:h-48 object-cover">
             <div class="m-4">
               <span class="font-bold">Tofu Curry</span>
               <span class="block text-gray-500 text-sm">Recipe by Mario</span>
             </div>
             <div class="badge">
+                <svg class="w-5 inline-block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M464 256A208 208 0 1 1 48 256a208 208 0 1 1 416 0zM0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM232 120l0 136c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2 280 120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"/></svg>
                 <span>25 mins</span>
             </div>
           </div>
@@ -88,9 +98,10 @@
         </div>
       </div>
       <div class="flex justify-center">
-        <div class="bg-secondary-100 text-secondary-200">Load more</div>
+        <div class="btn bg-secondary-100 text-secondary-200 hover:shadow-inner transform hover:scale-125 duration-300">Load more</div>
       </div>    
     </main>
   </div>
+  <script src="index.js"></script>
 </body>
 </html>
